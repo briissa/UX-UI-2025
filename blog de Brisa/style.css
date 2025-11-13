@@ -1,0 +1,462 @@
+/* ===== Estilo general ===== */
+body {
+  font-family: 'Lora', serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #444;
+}
+
+/* ===== Encabezado con iconos ===== */
+header {
+  background-color: #f9d8e7;
+}
+
+.header-icons-container {
+  border-bottom: 1px solid rgba(184, 71, 109, 0.2);
+  padding: 10px 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.icons a {
+  color: #b8476d;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: #ffd1dc;
+}
+
+/* ===== Navegación ===== */
+nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #f9d8e7;
+}
+
+.nav-logo-container h1 {
+  color: #b8476d;
+  font-size: 1.8em;
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.nav-links {
+  justify-self: end;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #b8476d;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1em;
+  transition: color 0.3s;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 8px 15px;
+  border-radius: 5px;
+}
+
+.nav-links a:hover {
+  color: #b8476d;
+  background-color: rgba(184, 71, 109, 0.5);
+}
+
+/* ===== Contenido principal ===== */
+main {
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+main img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  margin: 20px 0;
+}
+
+/* ===== Secciones ===== */
+section {
+  margin-bottom: 50px;
+}
+
+section h2 {
+  color: #e75480;
+  font-size: 2em;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+}
+
+/* ===== Pie de página ===== */
+footer {
+  background-color: #f9d8e7;
+  color: #b8476d;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+
+/* ===== Redes sociales ===== */
+.social-icons a {
+  color: #b8476d;
+  margin: 0 10px;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #ffd1dc;
+}
+
+/* ===== Carrusel principal (home) ===== */
+.home-main {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.home-main .carousel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.home-main .carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Centrar imágenes dentro de cada slide del carrusel principal */
+.home-main .carousel .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home-main .carousel .slide img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.home-main-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  text-align: center;
+  color: #b8476d;
+  background: rgba(0, 0, 0, 0.4);
+  padding: 30px 50px;
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+}
+
+.home-main-text {
+  font-size: 2.5em;
+  margin: 0 0 15px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+.home-main-description {
+  font-size: 1.2em;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Carrusel (general para otras páginas) ===== */
+.carousel {
+  position: relative;
+  max-width: 100%;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+.carousel .slides {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel .slide {
+  min-width: 100%;
+  position: relative;
+}
+
+/* Centrado también para carruseles generales si se reutilizan */
+.carousel .slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel .slide img {
+  width: auto;
+  max-width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.carousel img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel .caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.45) 100%);
+  color: #b8476d;
+  padding: 10px 14px;
+  font-size: 0.95em;
+}
+
+.carousel .control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.4);
+  color: #b8476d;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+.carousel .dots {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 6px;
+}
+
+.carousel .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.carousel .dot.active {
+  background: #fff;
+}
+
+/* ===== Galería de 3 columnas ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.gallery figure {
+  margin: 0;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  text-align: left;
+}
+
+.gallery figure img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.gallery figure figcaption {
+  padding: 10px 12px;
+  font-size: 0.95em;
+  color: #555;
+}
+
+/* ===== Galería simple (sin captions individuales) ===== */
+.gallery-simple {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.gallery-simple img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.gallery figure img:hover,
+.gallery-simple img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+}
+
+/* ===== Fila de galería con descripción ===== */
+.gallery-row {
+  margin-bottom: 40px;
+}
+
+.row-description {
+  text-align: center;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin: 0 auto;
+  padding: 0 20px;
+  max-width: 800px;
+}
+
+.gallery-description {
+  text-align: center;
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+/* Placeholder para completar filas */
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 220px;
+  background: #f8f3f6;
+  color: #b8476d;
+  border: 2px dashed #e6b4c8;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* ===== Sección Sobre mí ===== */
+.about-me {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  padding: 10px 40px 0 40px;
+  text-align: center;
+}
+
+.about-me p {
+  font-size: 1.05em;
+  line-height: 1.7;
+  color: #555;
+  margin: 0 auto;
+  max-width: 780px;
+}
+
+@media (max-width: 600px) {
+  .about-me { padding: 0 20px; }
+  .about-me p { font-size: 0.95em; }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  nav {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .nav-links {
+    justify-self: center;
+  }
+
+  .home-main {
+    height: 500px;
+  }
+
+  .home-main-content {
+    padding: 20px 30px;
+  }
+
+  .home-main-text {
+    font-size: 2em;
+  }
+
+  .home-main-description {
+    font-size: 1em;
+  }
+
+  .carousel img { height: 400px; }
+  .gallery { grid-template-columns: repeat(2, 1fr); }
+  .gallery-simple { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 15px 20px;
+  }
+
+  .nav-logo-container h1 {
+    font-size: 1.4em;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .home-main {
+    height: 400px;
+  }
+
+  .home-main-content {
+    padding: 15px 20px;
+  }
+
+  .home-main-text {
+    font-size: 1.5em;
+  }
+
+  .home-main-description {
+    font-size: 0.9em;
+  }
+
+  main { padding: 20px; }
+  section h2 { font-size: 1.6em; }
+  .carousel img { height: 300px; }
+  .gallery { grid-template-columns: 1fr; }
+  .gallery-simple { grid-template-columns: 1fr; }
+}
